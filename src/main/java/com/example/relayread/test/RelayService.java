@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 @Service
 public class RelayService {
-    @Value("mariadb.relay.name")
+    @Value("${mariadb.relay.name}")
     private String logName ;
 
     @Autowired
@@ -46,10 +46,8 @@ public class RelayService {
                     if (kind == StandardWatchEventKinds.OVERFLOW) {
                         continue;
                     }
-
                     WatchEvent<Path> ev = (WatchEvent<Path>) event;
                     Path fileName = ev.context();
-
                     if (fileName.toString().startsWith(logName)) {
                         readRelayLog(path.resolve(fileName).toString());
                     }
