@@ -1,0 +1,33 @@
+server:
+  port: 15532
+
+spring:
+  application:
+    name: relay
+  data:
+    redis:
+      customer:
+        infoKey: customer:info
+      cluster:
+        use: false
+        nodes: []
+      host: 127.0.0.1
+      port: 6379
+      password: ""
+      dataTimeOut: 10
+      duplicateLifeCycleMinute: 60
+      reportLifeCycleHour: 24
+      submittedLifeCycleHour: 24
+      submittingLifeCycleHour: 24
+      lettuce:
+        pool:
+          max-active: 50
+          max-wait: 50
+          max-idle: 50
+          min-idle: 0
+        shutdown-timeout: 100
+        timeout: 30
+
+mariadb:
+  relay:
+    name: mysqld-relay-bin.
