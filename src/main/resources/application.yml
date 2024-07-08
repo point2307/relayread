@@ -30,4 +30,5 @@ spring:
 
 mariadb:
   relay:
+    folder: /arch_log/mariadb/relay
     name: mysqld-relay-bin.
