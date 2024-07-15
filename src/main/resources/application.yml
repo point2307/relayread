@@ -1,5 +1,5 @@
 server:
-  port: 15532
+  port: 15532 #시작 포트 (컨트롤러 단에서 시작버튼을 누르기 때문에 필수)
 
 spring:
   application:
@@ -30,5 +30,5 @@ spring:
 
 mariadb:
   relay:
-    folder: /arch_log/mariadb/relay
+    folder: /arch_log/mariadb/relay   
     name: mysqld-relay-bin.
